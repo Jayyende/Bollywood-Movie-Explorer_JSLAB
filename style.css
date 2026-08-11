@@ -1,0 +1,873 @@
+/* =====================================================
+   GENERAL SETTINGS
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #101c32,
+            #172a46,
+            #0d213b
+        );
+
+    color: #222;
+
+    min-height: 100vh;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4b2b,
+            #e91e63
+        );
+
+    color: white;
+
+    padding: 35px 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+.header-content {
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+
+.header h1 {
+
+    font-size: 36px;
+
+    margin-bottom: 10px;
+}
+
+
+.header p {
+
+    font-size: 16px;
+
+    opacity: 0.95;
+}
+
+
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.container {
+
+    width: 92%;
+
+    max-width: 1150px;
+
+    margin: 30px auto;
+}
+
+
+
+/* =====================================================
+   SEARCH SECTION
+===================================================== */
+
+.search-section {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25);
+
+    margin-bottom: 20px;
+}
+
+
+.section-heading h2 {
+
+    font-size: 25px;
+
+    margin-bottom: 8px;
+}
+
+
+.section-heading p {
+
+    color: #666;
+
+    margin-bottom: 25px;
+}
+
+
+
+/* =====================================================
+   SEARCH GRID
+===================================================== */
+
+.search-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr;
+
+    gap: 18px;
+}
+
+
+.input-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.input-group label {
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+
+.input-group input,
+.input-group select {
+
+    padding: 13px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+
+.input-group input:focus,
+.input-group select:focus {
+
+    border-color: #e91e63;
+
+    box-shadow:
+        0 0 0 3px rgba(233, 30, 99, 0.12);
+}
+
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.button-container {
+
+    margin-top: 22px;
+
+    display: flex;
+
+    gap: 12px;
+}
+
+
+button {
+
+    cursor: pointer;
+
+    border: none;
+
+    font-family: inherit;
+}
+
+
+.search-btn {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4b2b,
+            #e91e63
+        );
+
+    color: white;
+
+    padding: 13px 25px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 5px 15px rgba(233, 30, 99, 0.25);
+
+    transition: 0.3s;
+}
+
+
+.search-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(233, 30, 99, 0.35);
+}
+
+
+.reset-btn {
+
+    background: #eeeeee;
+
+    color: #333;
+
+    padding: 13px 25px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.reset-btn:hover {
+
+    background: #dddddd;
+}
+
+
+
+/* =====================================================
+   POPULAR SEARCHES
+===================================================== */
+
+.popular-section {
+
+    background: white;
+
+    padding: 22px 25px;
+
+    border-radius: 16px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+.popular-section h3 {
+
+    margin-bottom: 15px;
+}
+
+
+.popular-buttons {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+
+.popular-btn {
+
+    padding: 9px 16px;
+
+    border-radius: 20px;
+
+    background: #f1f1f1;
+
+    color: #333;
+
+    transition: 0.3s;
+}
+
+
+.popular-btn:hover {
+
+    background: #e91e63;
+
+    color: white;
+
+    transform: translateY(-2px);
+}
+
+
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.status-message {
+
+    padding: 14px 18px;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+
+    font-weight: bold;
+}
+
+
+.status-success {
+
+    background: #d9f3e4;
+
+    color: #087443;
+
+    border: 1px solid #a7dfc0;
+}
+
+
+.status-error {
+
+    background: #ffe0e0;
+
+    color: #b42318;
+
+    border: 1px solid #ffb7b7;
+}
+
+
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.loading {
+
+    background: white;
+
+    border-radius: 16px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+.spinner {
+
+    width: 45px;
+
+    height: 45px;
+
+    border: 5px solid #ddd;
+
+    border-top: 5px solid #e91e63;
+
+    border-radius: 50%;
+
+    margin: auto;
+
+    animation:
+        spin 1s linear infinite;
+}
+
+
+.loading p {
+
+    margin-top: 15px;
+
+    font-weight: bold;
+}
+
+
+@keyframes spin {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+/* =====================================================
+   RESULTS SECTION
+===================================================== */
+
+.results-section {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.18);
+
+    margin-bottom: 20px;
+}
+
+
+.results-heading {
+
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid #eee;
+
+    padding-bottom: 15px;
+}
+
+
+.results-heading h2 {
+
+    font-size: 25px;
+}
+
+
+.results-heading p {
+
+    color: #777;
+
+    margin-top: 5px;
+}
+
+
+
+/* =====================================================
+   MOVIE GRID
+===================================================== */
+
+.movie-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+
+/* =====================================================
+   MOVIE CARD
+===================================================== */
+
+.movie-card {
+
+    background: white;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.10);
+
+    transition: 0.3s;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.movie-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.20);
+}
+
+
+
+/* =====================================================
+   POSTER
+===================================================== */
+
+.movie-poster {
+
+    width: 100%;
+
+    height: 390px;
+
+    object-fit: cover;
+
+    background: #eeeeee;
+}
+
+
+.poster-placeholder {
+
+    width: 100%;
+
+    height: 390px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e9e9e9,
+            #d5d5d5
+        );
+
+    color: #666;
+
+    text-align: center;
+}
+
+
+.poster-placeholder span {
+
+    font-size: 55px;
+
+    margin-bottom: 10px;
+}
+
+
+
+/* =====================================================
+   MOVIE CONTENT
+===================================================== */
+
+.movie-content {
+
+    padding: 18px;
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.movie-title {
+
+    font-size: 21px;
+
+    margin-bottom: 10px;
+
+    color: #111;
+}
+
+
+.movie-meta {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-bottom: 12px;
+}
+
+
+.meta-badge {
+
+    background: #f1f1f1;
+
+    padding: 5px 9px;
+
+    border-radius: 6px;
+
+    font-size: 12px;
+
+    color: #555;
+}
+
+
+.imdb-badge {
+
+    background: #f5c518;
+
+    color: #111;
+
+    font-weight: bold;
+}
+
+
+.movie-info {
+
+    margin-bottom: 10px;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    color: #555;
+}
+
+
+.movie-info strong {
+
+    color: #222;
+}
+
+
+.movie-plot {
+
+    font-size: 14px;
+
+    color: #666;
+
+    line-height: 1.6;
+
+    margin-top: 8px;
+
+    margin-bottom: 15px;
+}
+
+
+
+/* =====================================================
+   IMDB BUTTON
+===================================================== */
+
+.imdb-button {
+
+    display: inline-block;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    background: #111;
+
+    color: white;
+
+    padding: 10px;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    margin-top: auto;
+
+    transition: 0.3s;
+}
+
+
+.imdb-button:hover {
+
+    background: #f5c518;
+
+    color: #111;
+}
+
+
+
+/* =====================================================
+   NO RESULTS
+===================================================== */
+
+.no-results {
+
+    background: white;
+
+    padding: 45px;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.18);
+
+    margin-bottom: 20px;
+}
+
+
+.no-results-icon {
+
+    font-size: 55px;
+
+    margin-bottom: 10px;
+}
+
+
+.no-results p {
+
+    color: #777;
+
+    margin-top: 8px;
+}
+
+
+
+/* =====================================================
+   API INFORMATION
+===================================================== */
+
+.api-info {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.18);
+
+    margin-bottom: 25px;
+}
+
+
+.api-info h3 {
+
+    margin-bottom: 12px;
+}
+
+
+.api-info p {
+
+    color: #666;
+
+    line-height: 1.6;
+
+    margin-bottom: 8px;
+}
+
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+
+    background: #0c1627;
+
+    color: #ccc;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 30px;
+
+    line-height: 1.8;
+}
+
+
+
+/* =====================================================
+   UTILITY
+===================================================== */
+
+.hidden {
+
+    display: none !important;
+}
+
+
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .movie-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .search-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .header h1 {
+
+        font-size: 28px;
+    }
+
+    .container {
+
+        width: 94%;
+    }
+
+    .search-section {
+
+        padding: 20px;
+    }
+
+    .movie-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .movie-poster,
+    .poster-placeholder {
+
+        height: 420px;
+    }
+
+    .button-container {
+
+        flex-direction: column;
+    }
+
+    .search-btn,
+    .reset-btn {
+
+        width: 100%;
+    }
+
+}

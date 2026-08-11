@@ -1,55 +1,125 @@
 # 🎬 Bollywood Movie Explorer
 
-A modern and responsive **Bollywood Movie Explorer** web application built using **HTML, CSS, and JavaScript**.
+A modern and interactive **Bollywood Movie Explorer** developed as a JavaScript Lab project.
 
-The application uses the **OMDb API** to retrieve movie information and allows users to explore Bollywood movies based on **movie name, release year, and IMDb rating**.
+The application uses the **OMDb API** to retrieve movie information and allows users to search for Bollywood movies based on **movie name, release year, and IMDb rating**.
 
-This project was developed as part of a **JavaScript Lab practical** to demonstrate real-world API integration, asynchronous JavaScript, DOM manipulation, dynamic content rendering, event handling, filtering, and responsive web design.
+The project demonstrates practical implementation of **HTML, CSS, JavaScript, REST API integration, Fetch API, dynamic DOM manipulation, search filtering, and responsive UI design**.
 
 ---
 
-## ✨ Features
+## 📌 Project Overview
 
-- 🔎 Search Bollywood movies by movie name
+The **Bollywood Movie Explorer** is a web-based application that allows users to discover Bollywood movies and view important movie information retrieved dynamically from the OMDb API.
+
+Users can:
+
+- 🔎 Search for Bollywood movies
 - 📅 Search movies by release year
 - ⭐ Filter movies using minimum IMDb rating
-- 🎬 Display movie posters dynamically
-- ⭐ Display IMDb ratings
-- 📖 Display movie plots
-- 🎭 Display genre information
-- 🎥 Display director information
-- 📅 Display release year
-- 📝 Display detailed movie information
-- ⚡ Fetch movie data dynamically using JavaScript Fetch API
-- 🌐 Integration with the OMDb API
-- 📱 Responsive and user-friendly interface
-- 🔄 Reset search functionality
-- 💬 Popular Bollywood movie search suggestions
-- ⚠️ API and network error handling
-- 🖥️ Modern dashboard-style interface
-- 🎞️ Dynamic movie cards
-- 🔍 Detailed movie information view
+- 🎬 View movie posters
+- ⭐ View IMDb ratings
+- 📖 View movie plots
+- 🎭 View genres
+- 🎥 View directors
+- 📆 View release years
+- 🔗 Access detailed movie information
+- ⚡ Retrieve data dynamically using JavaScript Fetch API
 
 ---
 
-## 🛠️ Technologies Used
+## 🎯 Problem Statement
+
+> To call a Bollywood Movie API and retrieve Bollywood movie information based on IMDb ratings. The application should also support searching/filtering movies year-wise wherever possible.
+
+---
+
+## 💡 Solution
+
+This project provides a simple and user-friendly web interface where users can search for Bollywood movies.
+
+The application communicates with the **OMDb API** using JavaScript's `Fetch API`. The received JSON response is processed and displayed dynamically on the webpage.
+
+The application provides filtering options such as:
+
+- Movie Name
+- Release Year
+- Minimum IMDb Rating
+
+The retrieved movie information is presented using attractive movie cards.
+
+---
+
+## 🚀 Features
+
+### 🔎 Movie Search
+
+Users can enter a movie name and search for matching movies.
+
+### 📅 Year-wise Search
+
+Users can enter a release year to narrow down the search results.
+
+### ⭐ IMDb Rating Filter
+
+Users can select a minimum IMDb rating and display movies satisfying the selected rating criteria.
+
+### 🎬 Movie Cards
+
+Each movie is displayed in a structured card containing information such as:
+
+- Movie Poster
+- Movie Title
+- Release Year
+- IMDb Rating
+- Genre
+- Director
+- Plot
+
+### 🎨 Responsive User Interface
+
+The application uses a modern responsive layout that works across different screen sizes.
+
+### ⚡ Dynamic API Data
+
+Movie information is not hard-coded. It is retrieved dynamically from the OMDb API.
+
+### 🔄 Reset Functionality
+
+Users can reset the search fields and return to the default state.
+
+### 💬 Status Messages
+
+The application displays appropriate messages for:
+
+- Successful searches
+- No results
+- API errors
+- Invalid API responses
+- Internet/API connection problems
+
+---
+
+# 🛠️ Technologies Used
 
 | Technology | Purpose |
 |---|---|
-| HTML5 | Structure of the web application |
-| CSS3 | Styling, layout and responsive design |
-| JavaScript | Application logic and DOM manipulation |
-| Fetch API | Retrieving data from the external API |
-| OMDb API | Movie database and movie information |
-| IMDb | Movie rating source |
-| Visual Studio Code | Development environment |
-| GitHub | Project hosting and version control |
+| HTML5 | Webpage structure |
+| CSS3 | Styling and responsive UI |
+| JavaScript | Application logic |
+| Fetch API | API communication |
+| OMDb API | Movie information |
+| IMDb | Movie ratings/data source |
+| VS Code | Development environment |
+| GitHub | Source code management |
 
 ---
 
-## 🔗 API Used
+# 🔌 API Used
 
-This project uses the **OMDb API (The Open Movie Database)** to retrieve movie information.
+## OMDb API
+
+This project uses the **Open Movie Database (OMDb) API** to retrieve movie information.
 
 The API provides information such as:
 
@@ -57,18 +127,25 @@ The API provides information such as:
 - Release year
 - IMDb rating
 - IMDb ID
+- Poster
 - Genre
 - Director
 - Actors
 - Plot
-- Poster
 - Runtime
 - Language
-- Country
 - Awards
-- Additional movie information
+- Box office information
 
-### API Request Example
+The application sends requests to the OMDb API and processes the returned JSON data using JavaScript.
+
+---
+
+# 🔑 API Key
+
+An OMDb API key is required to retrieve movie information.
+
+The API request follows the general format:
 
 ```text
-https://www.omdbapi.com/?apikey=YOUR_API_KEY&s=Dangal
+https://www.omdbapi.com/?apikey=YOUR_API_KEY&s=MOVIE_NAME
